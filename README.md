@@ -11,3 +11,4 @@
 그리하여 최종 승리한 1인이 이 게임을 승리하게 됩니다.</p>
 
 <p>Developer : Minho Yoo</p>
+<p>Front-end FrameWork: Vue.js</p>
