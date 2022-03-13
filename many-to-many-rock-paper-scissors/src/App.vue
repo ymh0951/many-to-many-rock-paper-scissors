@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png" alt="로고">
-    <h1>다대다 가위바위보</h1>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -26,6 +25,9 @@ a {
 }
 img {
   border: 0;
+}
+body {
+  background-color: #f2f2f2;
 }
 #app {
   text-align: center;
