@@ -30,7 +30,7 @@ body {
   background-color: #f2f2f2;
 }
 #app {
-  text-align: center;
-  margin-top: 100px;
+  width: 100%;
+  height: 100vh;
 }
 </style>
