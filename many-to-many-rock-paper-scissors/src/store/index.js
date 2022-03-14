@@ -5,7 +5,8 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        user: []
+        user: [],
+        stageCount: 1
     },
     getters: {
 

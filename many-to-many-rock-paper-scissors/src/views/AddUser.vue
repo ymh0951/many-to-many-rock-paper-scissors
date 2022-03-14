@@ -1,34 +1,30 @@
 <template>
   <div class="add_user">
-      <div class="add_user_input">
-          <input type="text" v-model="addUser" @keyup.enter="addUsers">
-          <button @click="addUsers">+</button>
-      </div>
-      <ul class="user_list">
-          <li class="user" v-for="users in this.user">{{ users }}</li>
-      </ul>
+      <add-user-input></add-user-input>
+      <user-list></user-list>
       <transition name="fade">
-        <button class="next_btn" v-if="user.length >= 2">></button>
+        <button class="next_btn" v-if="$store.state.user.length >= 2" @click="nextStage">></button>
       </transition>
   </div>
 </template>
 
 <script>
+import addUserInput from '../components/addUserInput.vue';
+import userList from '../components/userList.vue';
+
 export default {
+    components: {
+        addUserInput,
+        userList
+    },
     data() {
-        return {
-            addUser: '',
-            user: this.$store.state.user
-        }
+      return {
+        stageNum: this.$store.state.stageCount
+      }
     },
     methods: {
-        addUsers() {
-            if(this.addUser == '') {
-                alert('유저를 입력해주세요.');
-            }else {
-                this.user.push(this.addUser);
-                this.addUser = '';
-            }
+        nextStage() {
+            this.$router.push(`stage${this.stageNum}`);
         }
     },
 }
@@ -37,6 +33,7 @@ export default {
 <style scoped>
 .add_user {
     width: 25%;
+    min-width: 250px;
     height: 70vh;
     margin: 0 auto;
     margin-top: 7vh;
@@ -47,49 +44,12 @@ export default {
     position: relative;
     background-color: white;
 }
-.add_user_input {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.add_user_input input {
-    width: 80%;
-    padding: 5px;
-    border: 1px solid #ffee00;
-}
-.add_user_input input:focus {
-    outline: none;
-    box-shadow: 0 0 5px #cec000;
-}
-.add_user_input button {
-    width: 10%;
-    padding: 5px;
-    border: 0;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #ffee00;
-}
-.user_list {
-    width: 100%;
-    height: 90%;
-    overflow-y: scroll;
-    margin: 0 auto;
-    box-shadow: 0 5px 5px gray;
-    background-color: #f2f2f2;;
-}
-.user {
-    width: 90%;
-    height: 35px;
-    margin: 0 auto;
-    margin-top: 20px;
-    border-radius: 10px;
-    line-height: 35px;
-    background-color: white;
-}
 .next_btn {
-    padding: 15px;
+    width: 50px;
+    height: 50px;
     border: 0;
     border-radius: 8px;
+    box-shadow: 0 0 10px #9c9200;
     font-size: 20px;
     font-weight: 600;
     position: absolute;
