@@ -2,14 +2,18 @@
     <transition-group name="fade" tag="ul" class="user_list">
         <li class="user" v-for="(users, index) in $store.state.user" :key="users">
             <span>{{ users }}</span>
-            <button class="remove_user" @click="$store.state.user.splice(index, 1);">X</button>
+            <button class="remove_user" @click="removeUser(index)">X</button>
         </li>
     </transition-group>
 </template>
 
 <script>
 export default {
-
+    methods: {
+        removeUser(index) {
+            this.$store.state.user.splice(index, 1);
+        }
+    }
 }
 </script>
 

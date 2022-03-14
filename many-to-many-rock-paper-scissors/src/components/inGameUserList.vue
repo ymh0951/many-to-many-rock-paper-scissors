@@ -4,6 +4,9 @@
     <li v-for="user in userList" :key="user">
         {{ user }}
     </li>
+    <li v-for="dead in deadList" :key="dead" class="dead_user">
+        {{ dead }} 
+    </li>
   </ul>
 </template>
 
@@ -12,6 +15,7 @@ export default {
     data() {
         return {
             userList: this.$store.state.playUser,
+            deadList: this.$store.state.deadUser,
         }
     },
 }
@@ -28,5 +32,9 @@ export default {
     box-shadow: 0 5px 10px gray;
     text-align: center;
     background-color: white;
+}
+.dead_user {
+    text-decoration: line-through;
+    color: gray;
 }
 </style>
