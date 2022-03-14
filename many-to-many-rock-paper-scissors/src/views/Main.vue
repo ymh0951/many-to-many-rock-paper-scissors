@@ -36,7 +36,7 @@ export default {
     width: 80%;
     height: 50px;
     margin-top: 50px;
-    border: 2px solid #ffee00;;
+    border: 2px solid #ffee00;
     border-radius: 20px;
     font-size: 1.2rem;
     font-weight: 600;

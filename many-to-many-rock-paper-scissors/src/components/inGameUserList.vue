@@ -31,6 +31,7 @@ export default {
     border-radius: 25px;
     box-shadow: 0 5px 10px gray;
     text-align: center;
+    overflow-y: scroll;
     background-color: white;
 }
 .dead_user {

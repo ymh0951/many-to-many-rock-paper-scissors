@@ -8,7 +8,6 @@
         <in-game-play-user></in-game-play-user>
         <div class="stage_computer_box">
             <in-game-computer></in-game-computer>
-            <button>결과 보기</button>
         </div>
       </div>
   </div>
