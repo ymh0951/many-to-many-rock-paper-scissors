@@ -1,6 +1,6 @@
 <template>
     <div class="add_user_input">
-        <input type="text" v-model="addUser" @keyup.enter="addUsers">
+        <input type="text" v-model="addUser" @keyup.enter="addUsers" placeholder="게임에 참가할 유저를 입력해주세요.">
         <button @click="addUsers">+</button>
     </div>
 </template>
