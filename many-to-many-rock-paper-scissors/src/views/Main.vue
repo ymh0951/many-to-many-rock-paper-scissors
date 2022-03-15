@@ -1,7 +1,7 @@
 <template>
   <div class="main">
       <img src="../assets/logo.png" alt="로고" class="logo_img">
-      <h1 class="main_tit">다대다 가위바위보</h1>
+      <h1 class="main_tit">다대일 가위바위보</h1>
       <button class="main_btn" @click="mainBtn">시작하기</button>
       <h4>※ 게임 방법 ※</h4>
       <p class="how_to_play">
