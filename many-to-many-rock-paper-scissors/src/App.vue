@@ -16,10 +16,17 @@ export default {
 </script>
 
 <style>
+@font-face {
+    font-family: 'SuncheonB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* 기본값 초기화 */
 * {
   margin: 0;
   padding: 0;
+  font-family: 'SuncheonB';
 }
 ul, li {
   list-style: none;
