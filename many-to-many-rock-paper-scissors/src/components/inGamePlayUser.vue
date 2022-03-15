@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 .user_list {
-    width: 20%;
+    width: 25%;
     height: 60vh;
     margin: 0 auto;
     margin-top: 7vh;

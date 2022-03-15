@@ -91,4 +91,16 @@ export default {
 .computer {
   margin: 50px 0;
 }
+.computer_btn {
+  margin-bottom: 50px;
+}
+.computer_btn button {
+  width: 80%;
+  padding: 15px;
+  border: 0;
+  font-weight: bold;
+  box-shadow: 0 5px 15px #b1a500;
+  cursor: pointer;
+  background-color: #ffee00;
+}
 </style>

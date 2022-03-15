@@ -28,6 +28,15 @@ export default {
 </script>
 
 <style scoped>
+.stage {
+  width: 70%;
+  margin: 0 auto;
+}
+.stage_tit {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 30px;
+}
 .stage_in_box {
     display: flex;
 }

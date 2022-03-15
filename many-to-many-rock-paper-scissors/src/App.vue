@@ -31,6 +31,7 @@ body {
 }
 #app {
   width: 100%;
+  min-width: 1450px;
   height: 100vh;
 }
 </style>
