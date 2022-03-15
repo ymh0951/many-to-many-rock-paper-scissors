@@ -1,6 +1,6 @@
 <template>
   <ul class="user_list">
-    <li v-for="(user, index) in playUser" :key="user">
+    <li v-for="(user, index) in $store.state.playUser" :key="user">
         <div class="img_opt_box">
             <span class="img_opt"><img src="../assets/image/question.png" alt="정답"></span>
             <span>{{ user }}</span>
@@ -16,24 +16,17 @@
 
 <script>
 export default {
-    data() {
-        return {
-            playUser: this.$store.state.playUser,
-            deadUser: this.$store.state.deadUser,
-            userQuestion: this.$store.state.userQuestion,
-        }
-    },
     created () {
         if(this.$store.state.stageCount == 1) {
             for(let i = 0; this.$store.state.user.length > i; i++){
-                this.playUser.push(this.$store.state.user[i]);
-                this.userQuestion.push(this.$store.state.user[i]);
+                this.$store.state.playUser.push(this.$store.state.user[i]);
+                this.$store.state.userQuestion.push(this.$store.state.user[i]);
             }
         }
     },
     methods: {
         scirrorsClick(index) {
-            this.$store.state.userQuestion[index] = 'scirrors';
+            this.$store.state.userQuestion[index] = 'scissors';
             document.querySelectorAll('.img_opt img')[index].className = 'opt_scissors';
             document.querySelectorAll('.img_opt img')[index].setAttribute('src', '/img/scissors.d55df7f9.png');
         },

@@ -9,6 +9,7 @@ export const store = new Vuex.Store({
         playUser: [],
         userQuestion: [],
         deadUser: [],
+        userBoolean: [],
         question: ['paper', 'rock', 'scissors'],
         computer: '',
         stageCount: 1
@@ -18,42 +19,34 @@ export const store = new Vuex.Store({
     },
     mutations: {
         deadUserAdd(state) {
-            for(let i = 0; state.playUser.length > i; i++) {
-                // 컴퓨터가 보를 냈을 때
+            for(var i = 0; state.playUser.length > i; i++) {
                 if(state.computer == 'paper') {
-                    if(state.userQuestion[i] == 'paper') {
-                        state.deadUser.push(state.playUser[i]);
-                        state.playUser.splice(i, 1);
-                    } else if(state.userQuestion[i] == 'rock') {
-                        state.deadUser.push(state.playUser[i]);
-                        state.playUser.splice(i, 1);
-                    } else {
-
-                    }
-                }
-                // 컴퓨터가 바위를 냈을 때
-                if(state.computer == 'rock') {
                     if(state.userQuestion[i] == 'rock') {
-                        state.deadUser.push(state.playUser[i]);
-                        state.playUser.splice(i, 1);
-                    } else if(state.userQuestion[i] == 'scissors') {
-                        state.deadUser.push(state.playUser[i]);
-                        state.playUser.splice(i, 1);
+                        state.userBoolean.push(false);
                     } else {
-                        
+                        state.userBoolean.push(true);
                     }
                 }
-                // 컴퓨터가 가위를 냈을 때
-                if(state.computer == 'scissors') {
+                if(state.computer == 'rock') {
                     if(state.userQuestion[i] == 'scissors') {
-                        state.deadUser.push(state.playUser[i]);
-                        state.playUser.splice(i, 1);
-                    } else if(state.userQuestion[i] == 'paper') {
-                        state.deadUser.push(state.playUser[i]);
-                        state.playUser.splice(i, 1);
+                        state.userBoolean.push(false);
                     } else {
-                        
+                        state.userBoolean.push(true);
                     }
+                }
+                if(state.computer == 'scissors') {
+                    if(state.userQuestion[i] == 'paper') {
+                        state.userBoolean.push(false);
+                    } else {
+                        state.userBoolean.push(true);
+                    }
+                }
+            }
+
+            for(var i = state.playUser.length; i >= 0; i--) {
+                if(state.userBoolean[i] == false) {
+                    state.deadUser.unshift(state.playUser[i]);
+                    state.playUser.splice(i, 1);
                 }
             }
         }

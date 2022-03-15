@@ -10,7 +10,6 @@ export default {
     data() {
         return {
             addUser: '',
-            user: this.$store.state.user
         }
     },
     methods: {
@@ -18,7 +17,7 @@ export default {
             if(this.addUser == '') {
                 alert('유저를 입력해주세요.');
             }else {
-                this.user.push(this.addUser);
+                this.$store.state.user.push(this.addUser);
                 this.addUser = '';
             }
         },

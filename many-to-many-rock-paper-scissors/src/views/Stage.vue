@@ -1,7 +1,7 @@
 <template>
   <div class="stage">
       <div class="stage_tit">
-        <h2>{{ stageNum }} Stage</h2>
+        <h2>{{ $store.state.stageCount }} Stage</h2>
       </div>
       <div class="stage_in_box">
         <in-game-user-list></in-game-user-list>
@@ -24,17 +24,6 @@ export default {
         inGamePlayUser,
         inGameComputer
     },
-    data() {
-        return {
-            stageNum: this.$store.state.stageCount,
-        }
-    },
-    methods: {
-        nextStage() {
-            this.stageNum ++;
-            this.$router.push(`stage${this.stageNum}`);
-        },
-    }
 }
 </script>
 

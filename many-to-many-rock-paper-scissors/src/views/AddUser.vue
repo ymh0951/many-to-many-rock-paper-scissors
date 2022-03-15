@@ -17,14 +17,9 @@ export default {
         addUserInput,
         userList
     },
-    data() {
-      return {
-        stageNum: this.$store.state.stageCount
-      }
-    },
     methods: {
         nextStage() {
-            this.$router.push(`stage${this.stageNum}`);
+            this.$router.push(`stage${this.$store.state.stageCount}`);
         }
     },
 }
