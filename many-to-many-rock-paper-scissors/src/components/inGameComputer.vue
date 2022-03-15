@@ -101,6 +101,11 @@ export default {
   font-weight: bold;
   box-shadow: 0 5px 15px #b1a500;
   cursor: pointer;
+  transition-duration: 0.5s;
   background-color: #ffee00;
+}
+.computer_btn button:hover {
+    font-size: 1.0rem;
+    background-color: #ffee00;
 }
 </style>
