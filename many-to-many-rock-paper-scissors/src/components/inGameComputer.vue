@@ -7,7 +7,7 @@
         <button @click="resetBtn" v-if="!btnBoolean">다음으로</button>
       </div>
       <div class="winner_box" v-if="gameOver">
-        {{ $store.state.playUser[0] }} 님이 {{ $store.state.user.length - 1}}명을 뚜드려패고 승리하였습니다.
+        {{ $store.state.playUser[0] }} 님이 {{ $store.state.user.length - 1}}명을 제치고 승리하였습니다.
       </div>
   </div>
 </template>
