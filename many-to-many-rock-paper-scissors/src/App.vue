@@ -7,6 +7,11 @@
 <script>
 export default {
   name: 'App',
+  created () {
+    if(this.$store.state.user.length <= 1) {
+      this.$router.push('/');
+    }
+  },
 }
 </script>
 
