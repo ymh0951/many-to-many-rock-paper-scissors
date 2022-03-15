@@ -8,7 +8,6 @@ import Stage from '../views/Stage.vue';
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
-    mode: 'history',
     routes: [
         {
             path: '/',
