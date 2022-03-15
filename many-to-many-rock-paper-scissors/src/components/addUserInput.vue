@@ -34,6 +34,7 @@ export default {
 .add_user_input input {
     width: 80%;
     padding: 5px;
+    transition-duration: 0.5s;
     border: 1px solid #ffee00;
 }
 .add_user_input input:focus {
