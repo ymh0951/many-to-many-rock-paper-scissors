@@ -27,6 +27,8 @@ export default {
   margin: 0;
   padding: 0;
   font-family: 'Cafe24Ssurround';
+  font-weight: normal;
+  font-style: normal;
 }
 ul, li {
   list-style: none;
