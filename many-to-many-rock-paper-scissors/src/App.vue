@@ -17,8 +17,8 @@ export default {
 
 <style>
 @font-face {
-    font-family: 'SuncheonB';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/SuncheonB.woff') format('woff');
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,7 +26,7 @@ export default {
 * {
   margin: 0;
   padding: 0;
-  font-family: 'SuncheonB';
+  font-family: 'Cafe24Ssurround';
 }
 ul, li {
   list-style: none;
