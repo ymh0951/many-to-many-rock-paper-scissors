@@ -46,4 +46,11 @@ body {
   min-width: 1520px;
   height: 100vh;
 }
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #fff781;
+}
 </style>
