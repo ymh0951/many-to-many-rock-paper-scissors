@@ -9,5 +9,6 @@
 죽으면 다음 스테이지에 참가할 수 없습니다.<br>
 그렇게 남은 최종 1인이 게임에 승리하게 됩니다.
 
-<p>Developer : Minho Yoo</p>
-<p>Front-end FrameWork: Vue.js</p>
+<p>크롬 사용을 권장합니다.</p>
+<p>Developer : Minho Yoo<br>
+Front-end FrameWork: Vue.js</p>
