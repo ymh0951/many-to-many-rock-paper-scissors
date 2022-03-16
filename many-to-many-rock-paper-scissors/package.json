@@ -1,5 +1,5 @@
 {
-  "name": "many-to-many-rock-paper-scissors",
+  "name": "many-to-one-rock-paper-scissors",
   "version": "0.1.0",
   "private": true,
   "scripts": {
