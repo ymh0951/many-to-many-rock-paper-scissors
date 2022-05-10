@@ -12,4 +12,5 @@
 <a href="https://many-to-one-rock-paper-scissors.netlify.app/">다대다 가위바위보</a><br>
 현사이트는 크롬 사용을 권장합니다.<br>
 Developer : Minho Yoo<br>
-Front-end FrameWork: Vue.js
+Front-end FrameWork: Vue.js<br>
+Vue.js 라이브러리: Vue-router, Vuex
