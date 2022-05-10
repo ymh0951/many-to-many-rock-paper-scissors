@@ -1,6 +1,6 @@
 # 다대다 가위바위보
 
-<h2>다대일 가위바위보란 ?</h2>
+## 다대일 가위바위보란 ?
 게임 방법은 간단합니다.<br>
 먼저 게임에 참가할 유저를 입력하여 다음으로 넘어갑니다.<br>
 그리고 가위바위보 게임이 시작됩니다.<br>
@@ -9,6 +9,7 @@
 죽으면 다음 스테이지에 참가할 수 없습니다.<br>
 그렇게 남은 최종 1인이 게임에 승리하게 됩니다.<br>
 <br>
-<p>현사이트는 크롬 사용을 권장합니다.</p>
-<p>Developer : Minho Yoo<br>
-Front-end FrameWork: Vue.js</p>
+<a href="https://many-to-one-rock-paper-scissors.netlify.app/">다대다 가위바위보</a><br>
+현사이트는 크롬 사용을 권장합니다.<br>
+Developer : Minho Yoo<br>
+Front-end FrameWork: Vue.js
